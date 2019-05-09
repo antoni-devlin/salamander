@@ -1,0 +1,266 @@
+/*
+  Theme name: Salamander
+  Author: Antoni Devlin
+  Version: 0.1
+
+*/
+
+/*  Mobile Styles  */
+@media screen and (max-width: 1000px) {
+  article.post {
+    width: 90vw;
+  }
+
+  article img {
+    width: 90vw;
+  }
+
+  .image-text {
+    font-size: 20px;
+  }
+
+  .image-text h1,h2,h3,h4,h5,h6 {
+    font-size: calc(90% + 0.10vw) !important;
+  }
+
+  .logo {
+    min-width: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .image-text h1,h2,h3,h4,h5,h6 {
+    font-size: 15px !important;
+  }
+
+}
+
+/* General Styling */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #555;
+    background-color: rgb(234, 234, 234);
+}
+
+/* Menu Styling */
+a {
+    text-decoration: none;
+}
+
+/* Logo Styling */
+.logo {
+  max-width: 5vw;
+}
+
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+nav>ul>li {
+    float: left;
+}
+
+nav>ul>li>a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: sans-serif;
+    font-size: 14pt;
+    font-weight: lighter;
+}
+
+nav>ul>li>a:hover {
+    color: rgb(244, 66, 75);
+}
+
+ul, ol {
+    padding-left: 20px;
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 > a {
+    color: rgb(0, 0, 0);
+}
+
+h1, h2, h3, h4, h5, h6 > a:hover {
+    color: rgba(244, 66, 75, 0.8);
+}
+
+h3 a {
+    color: black;
+}
+
+h3 a:hover {
+    color: rgb(244, 66, 75);
+}
+
+p > a {
+    color: rgb(244, 66, 75);
+}
+
+p > a:hover {
+    color: rgba(244, 66, 75, 0.5)
+}
+
+/* Grid Definition */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+}
+
+main {
+    margin-top: 5%;
+}
+
+/* Typography and Paragraph Styles */
+p {
+    line-height: 20px;
+    font-family: sans-serif;
+    text-align: justify;
+}
+
+h1, h2, h3, strong {
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+article>p:first-of-type::first-letter {
+    font-family: serif;
+    float: left;
+    font-size: 40pt;
+    padding: 10px;
+    padding-left: 0px;
+    color: rgb(244, 66, 75);
+}
+
+.main_col>article:not(:first-child) {
+    /* padding-top: 10%; */
+    margin-top: 5%;
+}
+
+.main_col>article:last-of-type {
+    margin-bottom: 5%;
+}
+
+.main_col>img {
+    display: block;
+    margin: auto;
+}
+
+.post_image_heading {
+    position: relative;
+    text-align: center;
+}
+
+.post_image_heading>div {
+    position: absolute;
+    bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 25%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.post_image_heading>div>h3 {
+    text-align: left;
+    padding: 10px;
+    font-family: sans-serif;
+    color: black;
+    text-transform: uppercase;
+    line-height: 130%;
+    max-width: 65%;
+    font-size: calc(100% + 1vw);
+}
+
+.post {
+    position: relative;
+    padding: 10px;
+    padding-bottom: 40px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.post p {
+    line-height: 25px;
+}
+
+.tags {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0px;
+}
+
+.tags > p > a:not(:first-of-type) {
+    padding-left: 10px;
+}
+
+.tags a:hover {
+
+}
+
+/* Image styling */
+article img {
+    max-width: 960px;
+    max-height: 540px;
+    background-size: cover;
+    display: block;
+    margin: auto;
+}
+
+/* General */
+main>article {
+    background-color:
+}
+
+/* Footer */
+footer {
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+}
+
+.post p {
+    padding-top: 10px;
+}
+
+[class^="pullquote_"] {
+    width: 300px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #655c9d;
+    margin: 10px 0 10px 0;
+    font-family: georgia;
+    font-weight: bold;
+    color: rgb(244, 66, 75);
+}
+
+[class^="pullquote_"]::first-letter {
+    font-size: 29px;
+}
+
+.pullquote_right {
+    float: right;
+    margin-left: 25px;
+
+}
+
+.pullquote_left {
+    float: left;
+    margin-right: 25px;
+}
+
+::selection {
+  background: rgba(244, 66, 75, 0.5);
+  color: white; /* WebKit/Blink Browsers */
+}w
