@@ -122,10 +122,18 @@ main {
 }
 
 /* Typography and Paragraph Styles */
-p {
+p, .more-link {
     line-height: 20px;
     font-family: sans-serif;
     text-align: justify;
+}
+
+.more-link{
+  color: rgb(244, 66, 75);
+}
+
+.more-link:hover {
+  color: rgba(244, 66, 75, 0.5)
 }
 
 h1, h2, h3, strong {

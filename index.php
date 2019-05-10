@@ -9,7 +9,7 @@
                   <li><a href="/">Home</a></li>
                 <?php } ?>
 
-
+                <li><a href="/">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">CV</a></li>
             </ul>
@@ -29,19 +29,17 @@
                               <h3><a href=" <?php the_permalink(); ?> "> <?php the_title(); ?> </a></h3>
                           </div>
                       </div>
-                      <p> <?php the_content(); ?> </p>
+                      <p> <?php the_excerpt(); ?></p>
+                      <p><a href="<?php echo get_permalink(); ?>">Read More</a> </p>
                       <div class="tags">
                           <p>
                             <?php
-                            //Loop through the $posts array IF it is an array.
-                            if(is_array($cats)){
-                                foreach($cats as $cat){ ?>
-                                  <a href="<?php echo get_category_link($cat->cat_ID); ?>">
-                                    #<?php echo $cat->name; ?>
-                                  </a>
-                              <?php }
+                            $categories = get_categories();
+                            foreach($categories as $category) {
+                              echo '<a href="' . get_category_link($category->term_id) . '">#' . $category->name . '</a>';
                             }
-                            ?>
+                             ?>
+
                           </p>
                       </div>
                   </article>

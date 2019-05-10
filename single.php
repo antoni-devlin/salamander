@@ -8,7 +8,7 @@
                 <li><a href="/">Home</a></li>
               <?php } ?>
 
-
+              <li><a href="/">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">CV</a></li>
           </ul>
@@ -37,12 +37,12 @@
                 <!-- Feb. 17, 2019, 10:29 a.m. -->
                 <div class="tags">
                     <p>
-
-
-                            <a href="#">#Python</a>
-
-                            <a href="#">#Stories</a>
-
+                      <?php
+                      $categories = get_categories();
+                      foreach($categories as $category) {
+                        echo '<a href="' . get_category_link($category->term_id) . '">#' . $category->name . '</a>';
+                      }
+                       ?>
 
                     </p>
                 </div>
