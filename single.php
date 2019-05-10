@@ -13,12 +13,12 @@ body {
 
     <article class="post post_detail">
         <div class="post_image_heading">
-            <img alt='test' src=" <?php the_post_thumbnail();?> " >
+            <img src=<?php the_post_thumbnail_url();?> alt="">
             <div class="image-text">
-                <h3><?php the_title(); ?></h3>
+                <h3> <?php the_title(); ?></h3>
             </div>
         </div>
-        <p><?php the_content(); ?></p> 
+        <p><?php the_content(); ?></p>
         <div class="tags">
             <p>
                     <a href="#">#TestCategory</a>
