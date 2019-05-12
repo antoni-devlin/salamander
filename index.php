@@ -1,15 +1,16 @@
 <?php get_header(); ?>
 
+<?php
+
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+ ?>
+
     <body>
         <nav>
             <ul>
-                <?php if (has_site_icon()) { ?>
-                  <li><a href="/"><img class="logo" src="/media/dvln-logo.png" alt=""></a></li>
-                <?php } else { ?>
-                  <li><a href="/">Home</a></li>
-                <?php } ?>
-
-                <li><a href="/">Home</a></li>
+                <li><a href="/"><img class="logo" src=" <?php echo $image[0]; ?> " alt=""></a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">CV</a></li>
             </ul>
@@ -18,6 +19,9 @@
             <aside class="sidebar_left">
             </aside>
             <main class="main_col">
+
+
+
               <?php
 
                 while(have_posts()) {
