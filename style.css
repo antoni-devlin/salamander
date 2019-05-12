@@ -144,14 +144,14 @@ h1, h2, h3, strong {
     line-height: 1;
 }
 
-article>p:first-of-type::first-letter {
+/* article>p:first-of-type::first-letter {
     font-family: serif;
     float: left;
     font-size: 40pt;
     padding: 10px;
     padding-left: 0px;
     color: rgb(244, 66, 75);
-}
+} */
 
 .main_col>article:not(:first-child) {
     /* padding-top: 10%; */
