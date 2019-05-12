@@ -10,7 +10,11 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
     <body>
         <nav>
             <ul>
+                <?php if (has_custom_logo()): ?>
                 <li><a href="/"><img class="logo" src=" <?php echo $image[0]; ?> " alt=""></a></li>
+                <?php else: ?>
+                <li> <a href="/">Home</a></li>
+                <?php endif; ?>
                 <li><a href="#">About</a></li>
                 <li><a href="#">CV</a></li>
             </ul>
