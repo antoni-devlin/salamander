@@ -28,7 +28,9 @@
               the_post(); ?>
             <article class="post post_detail">
                 <div class="post_image_heading">
-                    <img src=" <?php the_post_thumbnail_url();?> " alt="chris-arock-199799-unsplash_J7R3sga.jpg">
+                  <?php if (has_post_thumbnail()): ?>
+                    <img alt='' src=" <?php the_post_thumbnail();?> " >
+                  <?php endif; ?>
                     <div class="image-text">
                         <h3> <?php the_title(); ?> </h3>
                     </div>

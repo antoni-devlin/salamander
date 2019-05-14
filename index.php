@@ -32,7 +32,9 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                   the_post(); ?>
                   <article class="post">
                       <div class="post_image_heading">
-                          <img alt='test' src=" <?php the_post_thumbnail();?> " >
+                        <?php if (has_post_thumbnail()): ?>
+                          <img alt='' src=" <?php the_post_thumbnail();?> " >
+                        <?php endif; ?>
                           <div class="image-text">
                               <h3><a href=" <?php the_permalink(); ?> "> <?php the_title(); ?> </a></h3>
                           </div>
